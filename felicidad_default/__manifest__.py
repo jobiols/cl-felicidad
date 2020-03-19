@@ -152,6 +152,9 @@
         'https://github.com/OCA/website.git OCA-website',
         'https://github.com/OCA/ddmrp.git OCA-ddmrp',
         'https://github.com/OCA/mis-builder.git OCA-mis-builder',
+
+        # Repo mario extra
+        'https://github.com/jobiols/mario-extra-addons.git'
     ],
 
     'docker-images': [
