@@ -42,10 +42,17 @@
     'auto_install': False,
     'images': [],
 
-    #
-    # Here begins docker-odoo-environment manifest
-    # --------------------------------------------
-    # manifest version
+    'CPUs': '2',
+    'limit_request': '8196',
+    'limit_memory_soft': '640000000',
+    'limit_memory_hard': '760000000',
+    'limit_time_cpu': '60',
+    'limit_time_real': '120',
+
+    # Here begins odoo-env manifest configuration
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    # manifest version, if omitted it is backward compatible
     'env-ver': '2',
 
     # if Enterprise it installs in a different directory than community
@@ -54,6 +61,7 @@
     # port where odoo starts serving pages
     'port': '8069',
 
+    # list of url repos to install in the form 'repo-url directory'
     'git-repos': [
         'https://github.com/jobiols/cl-felicidad.git',
         # Repo externos
@@ -158,6 +166,7 @@
         'https://github.com/jobiols/mario-extra-addons.git'
     ],
 
+    # list of images to use in the form 'name image-url'
     'docker-images': [
         'odoo jobiols/odoo-jeo:11.0',
         'postgres postgres:11.1-alpine',
